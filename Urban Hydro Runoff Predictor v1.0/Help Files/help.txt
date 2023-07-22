@@ -1,0 +1,47 @@
+Flow of GUI:
+Ist window:
+image name: Enter the complete path of the map/image you want to open(jpg/jpeg/png).
+Parameter: The conversion factor for coordinates.
+Save: Saves the details and directs to the next window.
+
+2nd Window:
+The image you gave is displayed.
+Start: Button to start selecting boundary points of the catchment. To select a point press right click.
+delete prev point: To delete prev point.
+End: It creates an excel file, BoundaryPoints.xlsx, which has boundary points of a catchment and a unique sub-catchment number (if any). Thus a user is allowed to create multiple sub-catchment boundary points by pressing the end-button. 
+Next: Navigates user to next page.
+rb: To reset the image back to actual size.
+
+Control for image: Rotate mouse-wheel to zoom out. Press mouse wheel to zoom in. Left click and drag to drag.
+
+3rd Window:
+Press this First: Creates a .geo file from the .xlsx file containing boundary points previously selected
+Create mesh using this: Opens the gmsh software. In their open the BoundaryPoints.geo file. Customize the mesh size and generate triangular meshes. Save the mesh thereafter.
+Press and wait 2 min: Creates three excel files. Wait for it and press "Next".
+
+4th Window:
+lines: Draws the mesh created before here.
+
+5th Window:
+Guide: Gives instruction for creating five excel files which are mandatory for creating the case specific database.
+Next Select contour points: Directs you to select points having known elevation.
+
+6th Window:
+Start, End, Delete prev point: Same function as in window 2.
+Press this first: Gives you instruction to enter z coord of all the selected points.
+Interpolate: Interpolates given data for z coord value of al the points of mesh. Then press next.
+
+7th Window:
+(Essential to press in the same order)
+First: Matlab code that prcess the files.
+Create Final Database: Matlab code that creates the final database.  
+Generate Hydrograph: Matlab code that runs and create the final hydrograph for the catchment.
+
+*Rest two windows are just for extra ourpose and can be customized
+8th Window:
+Just a Button to navigate further.
+
+9th Window:
+Bye. The End:)
+
+Enjoy using this GUI :-D

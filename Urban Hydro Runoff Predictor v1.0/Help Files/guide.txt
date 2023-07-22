@@ -1,0 +1,43 @@
+You now need to create 5 excel files with precisely these Specifications:
+
+1. This file contains information about the edges of the drain.
+Name: ADrainC.xlsx		
+No of Columns: 9 
+	
+1	2	3	4			5		6		7		8		9	
+edge no	param1	param2	Catchement Associated (*)	Drain No		width of drain 	 slope of drain	roughness	 coeff.	Property of a Drain as per catchment connectivity (0 or 1 or (-1 or-2) **)
+
+
+
+2. This file contains information of the catchement boundary edges not associated with the drain.
+
+Name: CatchementBoundaryEdges.xlsx	
+No. of Columns: 2		
+
+1				2
+Catchement boundary Edge No.	Catchement no associated with
+
+
+3. This file is a table containing rows equal to the triangles obtained from the meshing. Each row has the impervious area of that triangle. 
+Name: APolygonTriangleIntersection.xlsx
+No. of Column: 1	
+
+
+4. This table contains additional required information which may vary in a very case specific manner. 
+Name: addon.xlsx
+No. of Column: 7	
+
+weir height	infiltration rate per time gap	simulation time	time gap (seconds)		mannings roughness coeff(nff)		beta (0.6)		Unit for required output[cubicmeter(1)/cfs(2)]
+
+5. This table contains the incoming and outgoing drains in the specific manner. 
+Name: Junction.xlsx
+No. of Column: 4	
+
+Drain no	drain 1 incoming	drain 2 incoming	drain 3 outgoing
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+* If one drain is not part of the catchment, then put its length here instead of keeping the field 0. 
+
+** If a drain segment is connected to only one side of a catchment - set this field as one 1.  If a drain segment is not connected to a catchment - set this field as one 0. 
+If both side of a drain segment is connected to two catchments ( say cat1 and cat2) -then set this field as -1 for the all the segments connected to cat1 and keeping the same order set this field as -2 for the same segments in the same order connected to cat2.  
